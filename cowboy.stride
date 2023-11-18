@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="cowboy" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">Write a description of class cowboy here.
+@author (your name) @version (a version number or a date)</javadoc>
+    <imports>
+        <import target="greenfoot.*" enable="true"/>
+        <import target="java.util.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields>
+        <comment xml:space="preserve">(World, Actor, GreenfootImage, Greenfoot and MouseInfo)</comment>
+        <variable access="private" static="true" final="true" type="double" type-java="double" name="COWBOY_GUN_VELOCITY" value="1500.0" value-java="1500.0" enable="true"/>
+    </fields>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="MouseInfo" type-java="MouseInfo" name="mouse" value="Greenfoot.getMouseInfo()" value-java="Greenfoot.getMouseInfo()" enable="true"/>
+                <if condition="mouse!=null" condition-java="mouse != null" enable="true">
+                    <ifStatements>
+                        <variable type="Vector2D" type-java="Vector2D" name="gunToMouse" value="new Vector2D(mouse.getX()-getX(),mouse.getY()-getY())" value-java=" new Vector2D(mouse.getX() - getX(), mouse.getY() - getY())" enable="true"/>
+                        <variable type="double" type-java="double" name="adjacent" value="gunToMouse.getX()" value-java="gunToMouse.getX()" enable="true"/>
+                        <variable type="double" type-java="double" name="opposite" value="gunToMouse.getY()" value-java="gunToMouse.getY()" enable="true"/>
+                        <variable type="double" type-java="double" name="angleRadians" value="Math.atan2(opposite,adjacent)" value-java="Math.atan2(opposite, adjacent)" enable="true"/>
+                        <variable type="double" type-java="double" name="angleDegrees" value="Math.toDegrees(angleRadians)" value-java="Math.toDegrees(angleRadians)" enable="true"/>
+                        <call expression="setRotation((int)angleDegrees)" expression-java="setRotation((int)angleDegrees)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="mouse!=null" condition-java="mouse != null" enable="true">
+                    <ifStatements>
+                        <variable type="Vector2D" type-java="Vector2D" name="gunToMouse" value="new Vector2D(mouse.getX()-getX(),mouse.getY()-getY())" value-java=" new Vector2D(mouse.getX() - getX(), mouse.getY() - getY())" enable="true"/>
+                        <call expression="alignWithVector(gunToMouse)" expression-java="alignWithVector(gunToMouse)" enable="true"/>
+                        <if condition="Greenfoot.mouseClicked(null)" condition-java="Greenfoot.mouseClicked(null)" enable="true">
+                            <ifStatements>
+                                <call expression="gunToMouse.normalize()" expression-java="gunToMouse.normalize()" enable="true"/>
+                                <assign dest="gunToMouse" dest-java="gunToMouse" src="Vector2D.multiply(gunToMouse,COWBOY_GUN_VELOCITY)" src-java="Vector2D.multiply(gunToMouse, COWBOY_GUN_VELOCITY)" enable="true"/>
+                                <variable type="bulllet" type-java="bulllet" name="bullet" value="new bulllet()" value-java=" new bulllet()" enable="true"/>
+                                <call expression="bullet.setVelocity(gunToMouse)" expression-java="bullet.setVelocity(gunToMouse)" enable="true"/>
+                                <call expression="getWorld().addObject(bullet,getX(),getY())" expression-java="getWorld().addObject(bullet, getX(), getY())" enable="true"/>
+                            </ifStatements>
+                        </if>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.isKeyDown(&quot;right&quot;)" condition-java="Greenfoot.isKeyDown(&quot;right&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="move(2)" expression-java="move(2)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.isKeyDown(&quot;left&quot;)" condition-java="Greenfoot.isKeyDown(&quot;left&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="move(-2)" expression-java="move(-2)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <variable type="Actor" type-java="Actor" name="door" value="getOneIntersectingObject(door.class)" value-java="getOneIntersectingObject(door.class)" enable="true"/>
+                <if condition="" condition-java="" enable="true">
+                    <ifStatements/>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="alignWithVector" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params>
+                <params type="Vector2D" type-java="Vector2D" name="v"/>
+            </params>
+            <throws/>
+            <body>
+                <variable type="double" type-java="double" name="adjacent" value="v.getX()" value-java="v.getX()" enable="true"/>
+                <variable type="double" type-java="double" name="opposite" value="v.getY()" value-java="v.getY()" enable="true"/>
+                <variable type="double" type-java="double" name="angleRadians" value="Math.atan2(opposite,adjacent)" value-java="Math.atan2(opposite, adjacent)" enable="true"/>
+                <variable type="double" type-java="double" name="angleDegrees" value="Math.toDegrees(angleRadians)" value-java="Math.toDegrees(angleRadians)" enable="true"/>
+                <call expression="setRotation((int)angleDegrees)" expression-java="setRotation((int)angleDegrees)" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>

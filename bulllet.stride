@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="bulllet" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields>
+        <variable access="private" type="Point2D" type-java="Point2D" name="position" enable="true"/>
+        <variable access="private" type="Vector2D" type-java="Vector2D" name="velocity" enable="true"/>
+        <variable access="private" type="Vector2D" type-java="Vector2D" name="acceleration" enable="true"/>
+        <variable access="private" static="true" final="true" type="double" type-java="double" name="GRAVITY" value="7*200" value-java="7 * 200" enable="true"/>
+    </fields>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <assign dest="position" dest-java="position" src="null" src-java="null" enable="true"/>
+                <assign dest="velocity" dest-java="velocity" src="new Vector2D(0.0,0.0)" src-java=" new Vector2D(0.0, 0.0)" enable="true"/>
+                <assign dest="acceleration" dest-java="acceleration" src="new Vector2D(0.0,GRAVITY)" src-java=" new Vector2D(0.0, GRAVITY)" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="updatePhysics()" expression-java="updatePhysics()" enable="true"/>
+                <variable type="Actor" type-java="Actor" name="alien" value="getOneIntersectingObject(alien.class)" value-java="getOneIntersectingObject(alien.class)" enable="true"/>
+                <if condition="alien!=null" condition-java="alien != null" enable="true">
+                    <ifStatements>
+                        <variable type="World" type-java="World" name="forrest" value="getWorld()" value-java="getWorld()" enable="true"/>
+                        <call expression="forrest.removeObject(alien)" expression-java="forrest.removeObject(alien)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="setVelocity" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params>
+                <params type="Vector2D" type-java="Vector2D" name="newValue"/>
+            </params>
+            <throws/>
+            <body>
+                <assign dest="velocity" dest-java="velocity" src="newValue" src-java="newValue" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="updatePhysics" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <comment xml:space="preserve">Initial position</comment>
+                <if condition="position==null" condition-java="position == null" enable="true">
+                    <ifStatements>
+                        <assign dest="position" dest-java="position" src="new Point2D(getX(),getY())" src-java=" new Point2D(getX(), getY())" enable="true"/>
+                    </ifStatements>
+                </if>
+                <comment xml:space="preserve">Get time step duration</comment>
+                <variable type="forrest" type-java="forrest" name="world" value="(forrest)getWorld()" value-java="(forrest)getWorld()" enable="true"/>
+                <variable type="double" type-java="double" name="dt" value="world.getTimeStepDuration()" value-java="world.getTimeStepDuration()" enable="true"/>
+                <comment xml:space="preserve">Update velocity</comment>
+                <variable type="Vector2D" type-java="Vector2D" name="velocityVariation" value="Vector2D.multiply(acceleration,dt)" value-java="Vector2D.multiply(acceleration, dt)" enable="true"/>
+                <assign dest="velocity" dest-java="velocity" src="Vector2D.add(velocity,velocityVariation)" src-java="Vector2D.add(velocity, velocityVariation)" enable="true"/>
+                <comment xml:space="preserve">Update position</comment>
+                <variable type="Vector2D" type-java="Vector2D" name="positionVariation" value="Vector2D.multiply(velocity,dt)" value-java="Vector2D.multiply(velocity, dt)" enable="true"/>
+                <call expression="position.add(positionVariation)" expression-java="position.add(positionVariation)" enable="true"/>
+                <comment xml:space="preserve">Set new actor position</comment>
+                <call expression="setLocation((int)position.getX(),(int)position.getY())" expression-java="setLocation((int)position.getX(), (int)position.getY())" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>

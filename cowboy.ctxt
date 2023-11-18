@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=cowboy
+comment0.text=\n\ Write\ a\ description\ of\ class\ cowboy\ here.\n\ @author\ (your\ name)\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ \n
+comment2.params=v
+comment2.target=void\ alignWithVector(Vector2D)
+comment2.text=\n\ \n
+numComments=3
