@@ -19,9 +19,8 @@ public class bulllet extends Actor
     public bulllet()
     {
         position = null;
-        // I was here
-        velocity =  new  Vector2D(0.0, 0.0);
-        acceleration =  new  Vector2D(0.0, GRAVITY);
+        velocity =  new Vector2D(0.0, 0.0);
+        acceleration =  new Vector2D(0.0, GRAVITY);
     }
 
     /**
@@ -30,10 +29,10 @@ public class bulllet extends Actor
     public void act()
     {
         updatePhysics();
-        Actor alien1 = getOneIntersectingObject(alien1.class);
-        if (alien1 != null) {
+        Actor alien = getOneIntersectingObject(alien.class);
+        if (alien != null) {
             World forrest = getWorld();
-            forrest.removeObject(alien1);
+            forrest.removeObject(alien);
         }
     }
 
@@ -52,7 +51,7 @@ public class bulllet extends Actor
     {
         /* Initial position*/
         if (position == null) {
-            position =  new  Point2D(getX(), getY());
+            position =  new Point2D(getX(), getY());
         }
         /* Get time step duration*/
         forrest world = (forrest)getWorld();

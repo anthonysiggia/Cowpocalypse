@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=forrest
-comment0.text=\n\ Write\ a\ description\ of\ class\ forrest\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ forrest\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=forrest()
 comment2.params=
@@ -11,5 +11,5 @@ comment4.params=
 comment4.target=double\ getTimeStepDuration()
 comment5.params=
 comment5.target=void\ prepare()
-comment5.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\n
+comment5.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
 numComments=6

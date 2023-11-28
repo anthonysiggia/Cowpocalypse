@@ -6,14 +6,14 @@ import greenfoot.*;
 /**
  * 
  */
-public class gameOverWonWorld extends World
+public class tt extends World
 {
 
     /**
-     * Constructor for objects of class gameOverWonWorld.
+     * Constructor for objects of class tt.
      */
-    public gameOverWonWorld()
+    public tt()
     {
-        super(355, 400, 1);
+        super(600, 400, 1);
     }
 }
