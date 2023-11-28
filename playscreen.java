@@ -1,21 +1,19 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+// WARNING: This file is auto-generated and any changes to it will be overwritten
+import lang.stride.*;
+import java.util.*;
+import greenfoot.*;
 
 /**
- * Write a description of class playscreen here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
-public class playscreen extends World
+public class PlayScreen extends World
 {
 
     /**
-     * Constructor for objects of class playscreen.
-     * 
+     * Constructor for objects of class PlayScreen.
      */
-    public playscreen()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(355, 400, 1); 
+    public PlayScreen()
+    {
+        super(600, 400, 1);
     }
 }
