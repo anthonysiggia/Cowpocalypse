@@ -1,17 +1,17 @@
-// WARNING: This file is auto-generated and any changes to it will be overwritten
-import lang.stride.*;
-import java.util.*;
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
+ * Write a description of class bulllet here.
  * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class bulllet extends Actor
 {
     private Point2D position;
     private Vector2D velocity;
     private Vector2D acceleration;
-    private static final double GRAVITY = 7 * 200;
+    private static final double GRAVITY = 4 * 100;
 
     /**
      * 
@@ -19,8 +19,8 @@ public class bulllet extends Actor
     public bulllet()
     {
         position = null;
-        velocity =  new Vector2D(0.0, 0.0);
-        acceleration =  new Vector2D(0.0, GRAVITY);
+        velocity =  new  Vector2D(0.0, 0.0);
+        acceleration =  new  Vector2D(0.0, GRAVITY);
     }
 
     /**
@@ -29,10 +29,10 @@ public class bulllet extends Actor
     public void act()
     {
         updatePhysics();
-        Actor alien = getOneIntersectingObject(alien.class);
-        if (alien != null) {
+        Actor alien1 = getOneIntersectingObject(alien1.class);
+        if (alien1 != null) {
             World forrest = getWorld();
-            forrest.removeObject(alien);
+            forrest.removeObject(alien1);
         }
     }
 
@@ -51,7 +51,7 @@ public class bulllet extends Actor
     {
         /* Initial position*/
         if (position == null) {
-            position =  new Point2D(getX(), getY());
+            position =  new  Point2D(getX(), getY());
         }
         /* Get time step duration*/
         forrest world = (forrest)getWorld();
