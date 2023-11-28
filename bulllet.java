@@ -19,6 +19,7 @@ public class bulllet extends Actor
     public bulllet()
     {
         position = null;
+        // I was here
         velocity =  new  Vector2D(0.0, 0.0);
         acceleration =  new  Vector2D(0.0, GRAVITY);
     }
