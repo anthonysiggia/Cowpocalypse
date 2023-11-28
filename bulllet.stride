@@ -31,11 +31,11 @@
             <throws/>
             <body>
                 <call expression="updatePhysics()" expression-java="updatePhysics()" enable="true"/>
-                <variable type="Actor" type-java="Actor" name="alien" value="getOneIntersectingObject(alien.class)" value-java="getOneIntersectingObject(alien.class)" enable="true"/>
-                <if condition="alien!=null" condition-java="alien != null" enable="true">
+                <variable type="Actor" type-java="Actor" name="alien1" value="getOneIntersectingObject(alien1.class)" value-java="getOneIntersectingObject(alien1.class)" enable="true"/>
+                <if condition="alien1!=null" condition-java="alien1 != null" enable="true">
                     <ifStatements>
                         <variable type="World" type-java="World" name="forrest" value="getWorld()" value-java="getWorld()" enable="true"/>
-                        <call expression="forrest.removeObject(alien)" expression-java="forrest.removeObject(alien)" enable="true"/>
+                        <call expression="forrest.removeObject(alien1)" expression-java="forrest.removeObject(alien1)" enable="true"/>
                     </ifStatements>
                 </if>
             </body>
