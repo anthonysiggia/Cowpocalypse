@@ -1,17 +1,17 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+// WARNING: This file is auto-generated and any changes to it will be overwritten
+import lang.stride.*;
+import java.util.*;
+import greenfoot.*;
 
 /**
- * Write a description of class bulllet here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 public class bulllet extends Actor
 {
     private Point2D position;
     private Vector2D velocity;
     private Vector2D acceleration;
-    private static final double GRAVITY = 4 * 100;
+    private static final double GRAVITY = 7 * 200;
 
     /**
      * 
