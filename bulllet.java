@@ -19,8 +19,8 @@ public class bulllet extends Actor
     public bulllet()
     {
         position = null;
-        velocity =  new Vector2D(0.0, 0.0);
-        acceleration =  new Vector2D(0.0, GRAVITY);
+        velocity =  new  Vector2D(0.0, 0.0);
+        acceleration =  new  Vector2D(0.0, GRAVITY);
     }
 
     /**
@@ -51,10 +51,10 @@ public class bulllet extends Actor
     {
         /* Initial position*/
         if (position == null) {
-            position =  new Point2D(getX(), getY());
+            position =  new  Point2D(getX(), getY());
         }
         /* Get time step duration*/
-        World forrest = (forrest)getWorld();
+        barn world = (barn)getWorld();
         double dt = barn.getTimeStepDuration();
         /* Update velocity*/
         Vector2D velocityVariation = Vector2D.multiply(acceleration, dt);
