@@ -34,7 +34,7 @@
                 <variable type="Actor" type-java="Actor" name="alien1" value="getOneIntersectingObject(alien1.class)" value-java="getOneIntersectingObject(alien1.class)" enable="true"/>
                 <if condition="alien1!=null" condition-java="alien1 != null" enable="true">
                     <ifStatements>
-                        <variable type="World" type-java="World" name="forrest" value="getWorld()" value-java="getWorld()" enable="true"/>
+                        <variable type="World" type-java="World" name="world" value="getWorld()" value-java="getWorld()" enable="true"/>
                         <call expression="forrest.removeObject(alien1)" expression-java="forrest.removeObject(alien1)" enable="true"/>
                     </ifStatements>
                 </if>
