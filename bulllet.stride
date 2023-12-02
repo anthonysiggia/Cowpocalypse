@@ -35,7 +35,7 @@
                 <if condition="alien1!=null" condition-java="alien1 != null" enable="true">
                     <ifStatements>
                         <variable type="World" type-java="World" name="world" value="getWorld()" value-java="getWorld()" enable="true"/>
-                        <call expression="forrest.removeObject(alien1)" expression-java="forrest.removeObject(alien1)" enable="true"/>
+                        <call expression="world.removeObject(alien1)" expression-java="world.removeObject(alien1)" enable="true"/>
                     </ifStatements>
                 </if>
             </body>
@@ -62,7 +62,7 @@
                     </ifStatements>
                 </if>
                 <comment xml:space="preserve">Get time step duration</comment>
-                <variable type="forrest" type-java="forrest" name="world" value="(forrest)getWorld()" value-java="(forrest)getWorld()" enable="true"/>
+                <variable type="World" type-java="World" name="world" value="(world)getWorld()" value-java="(world)getWorld()" enable="true"/>
                 <variable type="double" type-java="double" name="dt" value="world.getTimeStepDuration()" value-java="world.getTimeStepDuration()" enable="true"/>
                 <comment xml:space="preserve">Update velocity</comment>
                 <variable type="Vector2D" type-java="Vector2D" name="velocityVariation" value="Vector2D.multiply(acceleration,dt)" value-java="Vector2D.multiply(acceleration, dt)" enable="true"/>
