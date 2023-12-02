@@ -62,8 +62,8 @@
                     </ifStatements>
                 </if>
                 <comment xml:space="preserve">Get time step duration</comment>
-                <variable type="World" type-java="World" name="world" value="(world)getWorld()" value-java="(world)getWorld()" enable="true"/>
-                <variable type="double" type-java="double" name="dt" value="world.getTimeStepDuration()" value-java="world.getTimeStepDuration()" enable="true"/>
+                <variable type="World" type-java="World" name="forrest" value="(forrest)getWorld()" value-java="(forrest)getWorld()" enable="true"/>
+                <variable type="double" type-java="double" name="dt" value="barn.getTimeStepDuration()" value-java="barn.getTimeStepDuration()" enable="true"/>
                 <comment xml:space="preserve">Update velocity</comment>
                 <variable type="Vector2D" type-java="Vector2D" name="velocityVariation" value="Vector2D.multiply(acceleration,dt)" value-java="Vector2D.multiply(acceleration, dt)" enable="true"/>
                 <assign dest="velocity" dest-java="velocity" src="Vector2D.add(velocity,velocityVariation)" src-java="Vector2D.add(velocity, velocityVariation)" enable="true"/>
