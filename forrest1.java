@@ -1,42 +1,36 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class forrest here.
+ * Write a description of class forrest1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class forrest extends World
+public class forrest1 extends levels
 {
-
     private long lastFrameTimeMS;
     private double timeStepDuration;
-
-    public forrest()
-    {  
-        super(900, 400, 1);
+public forrest1()
+ {  
+        
         lastFrameTimeMS = System.currentTimeMillis();
-        timeStepDuration = 1.0 / 60; // seems to be the default
+        timeStepDuration = 1.0 / 60; 
 
         prepare();
     }
-
-    public void started()
+public void started()
     {
         lastFrameTimeMS = System.currentTimeMillis();
     }
-
-    public void act()
+public void act()
     {
         timeStepDuration = (System.currentTimeMillis() - lastFrameTimeMS) / 1000.0;
         lastFrameTimeMS = System.currentTimeMillis();
     }
-
-    public double getTimeStepDuration()
+public double getTimeStepDuration()
     {
         return timeStepDuration;
     }
-
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -119,21 +113,5 @@ public class forrest extends World
         addObject(alien126,525,82);
         alien1 alien127 = new alien1();
         addObject(alien127,326,204);
-        removeObject(alien125);
-        removeObject(alien16);
-        removeObject(alien127);
-        removeObject(alien124);
-        alien123.setLocation(285,72);
-        removeObject(alien123);
-        removeObject(alien14);
-        removeObject(alien122);
-        removeObject(alien15);
-    }
 }
-
-    
-    
-
-    
-
-
+}

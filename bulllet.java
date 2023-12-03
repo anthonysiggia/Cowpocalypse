@@ -1,4 +1,3 @@
-// WARNING: This file is auto-generated and any changes to it will be overwritten
 import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
@@ -19,8 +18,8 @@ public class bulllet extends Actor
     public bulllet()
     {
         position = null;
-        velocity =  new  Vector2D(0.0, 0.0);
-        acceleration =  new  Vector2D(0.0, GRAVITY);
+        velocity =  new Vector2D(0.0, 0.0);
+        acceleration =  new Vector2D(0.0, GRAVITY);
     }
 
     /**
@@ -49,20 +48,18 @@ public class bulllet extends Actor
      */
     public void updatePhysics()
     {
-        /* Initial position*/
         if (position == null) {
-            position =  new  Point2D(getX(), getY());
+            position =  new Point2D(getX(), getY());
         }
-        /* Get time step duration*/
-        barn world = (barn)getWorld();
-        double dt = barn.getTimeStepDuration();
-        /* Update velocity*/
+        levels world = (levels)getWorld();
+        double dt = world.getTimeStepDuration();
+        
         Vector2D velocityVariation = Vector2D.multiply(acceleration, dt);
         velocity = Vector2D.add(velocity, velocityVariation);
-        /* Update position*/
+        
         Vector2D positionVariation = Vector2D.multiply(velocity, dt);
         position.add(positionVariation);
-        /* Set new actor position*/
+        
         setLocation((int)position.getX(), (int)position.getY());
     }
 }
