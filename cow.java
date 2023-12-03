@@ -14,12 +14,6 @@ public class cow extends Actor
      */
     public void act()
     {
-        move(-3);
-        if (Greenfoot.getRandomNumber(10) == 1) {
-            turn(Greenfoot.getRandomNumber(90) - 45);
-        }
-        if (isAtEdge()) {
-            turn(180);
-        }
+    
     }
 }

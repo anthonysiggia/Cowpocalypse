@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=forrest1
-comment0.text=\n\ Write\ a\ description\ of\ class\ forrest1\ here.\n\ @author\ (your\ name)\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.target=spaceShip
+comment0.text=\n\ \n
 comment1.params=
-comment1.target=forrest1()
+comment1.target=spaceShip()
 comment1.text=\n\ \n
 comment2.params=
 comment2.target=void\ started()

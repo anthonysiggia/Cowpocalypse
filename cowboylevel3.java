@@ -1,36 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class GHGJ here.
+ * Write a description of class cowboylevel3 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GHGJ extends Actor
+public class cowboylevel3 extends GHGJ
 {
-    private static final double COWBOY_GUN_VELOCITY = 1500.0;
+     private static final double COWBOY_GUN_VELOCITY = 1500.0;
             public void transitionToGameLossWorld()
     {
         World gameLossOverWorld =  new  gameLossOverWorld();
         Greenfoot.setWorld(gameLossOverWorld);
     }
-              public void transitionToBarnWorld()
-    {
-        World barn =  new  barn();
-        Greenfoot.setWorld(barn);
-    }
+       
       
-    
-      public boolean level2()
-    {
-        World  world = getWorld();
-        if (world.getObjects(j.class).isEmpty()) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
     
     public boolean isGameLoss()
     {
@@ -46,8 +31,26 @@ public class GHGJ extends Actor
     /**
      * 
      */
-    
-    
+    public boolean isGameWon()
+    {
+        World world = getWorld();
+        if (world.getObjects(j.class).isEmpty()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    /**
+     * 
+     */
+    public void transitionToGameWonWorld()
+    {
+        World gameOverWonWorld =  new  gameOverWonWorld();
+        Greenfoot.setWorld(gameOverWonWorld);
+    }
+
     /**
      * 
      */
@@ -84,13 +87,6 @@ public class GHGJ extends Actor
             World world = getWorld();
             world.removeObject(j);
         }
-        
-        if (isGameLoss()) {
-            transitionToGameLossWorld();
-        }
-        if (level2()){
-            transitionToBarnWorld();
-        }
     }
     /**
      * 
@@ -103,5 +99,4 @@ public class GHGJ extends Actor
         double angleDegrees = Math.toDegrees(angleRadians);
         setRotation((int)angleDegrees);
     }
-    }
-
+}

@@ -82,5 +82,14 @@ public class barn extends levels
         alien1 alien112 = new alien1();
         addObject(alien112,66,322);
         alien19.setLocation(41,109);
+        gHGJ.setLocation(508,44);
+        removeObject(gHGJ);
+        cowboyLevel2 cowboyLevel2 = new cowboyLevel2();
+        addObject(cowboyLevel2,493,96);
+        alien111.setLocation(745,341);
+        removeObject(j);
+        alien111.setLocation(779,329);
+        doorLevel2 doorLevel2 = new doorLevel2();
+        addObject(doorLevel2,867,333);
     }
 }

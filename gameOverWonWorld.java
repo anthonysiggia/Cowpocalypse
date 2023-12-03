@@ -16,4 +16,11 @@ public class gameOverWonWorld extends World
     {
         super(355, 400, 1);
     }
+
+    /**
+     * 
+     */
+    public void started()
+    {
+    }
 }

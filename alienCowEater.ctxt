@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=alienCowEater
+comment0.text=\n\ \n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ transitionToGameLossWorld()
+comment3.params=
+comment3.target=boolean\ isGameLost()
+comment4.params=
+comment4.target=void\ moveAround()
+comment4.text=\n\ \n
+numComments=5

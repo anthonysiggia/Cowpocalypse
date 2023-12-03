@@ -1,36 +1,34 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import lang.stride.*;
+import java.util.*;
+import greenfoot.*;
 
 /**
- * Write a description of class GHGJ here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
-public class GHGJ extends Actor
+public class cowboyLevel2 extends GHGJ
 {
-    private static final double COWBOY_GUN_VELOCITY = 1500.0;
+     private static final double COWBOY_GUN_VELOCITY = 1500.0;
             public void transitionToGameLossWorld()
     {
         World gameLossOverWorld =  new  gameLossOverWorld();
         Greenfoot.setWorld(gameLossOverWorld);
     }
-              public void transitionToBarnWorld()
+             public void transitionToSpaceShipWorld()
     {
-        World barn =  new  barn();
-        Greenfoot.setWorld(barn);
+        World spaceShape =  new  spaceShip();
+        Greenfoot.setWorld(spaceShape);
     }
-      
-    
-      public boolean level2()
+      public boolean level3()
     {
         World  world = getWorld();
-        if (world.getObjects(j.class).isEmpty()) {
+        if (world.getObjects(doorLevel2.class).isEmpty()) {
             return true;
         }
         else {
             return false;
         }
     }
+    
     
     public boolean isGameLoss()
     {
@@ -43,10 +41,9 @@ public class GHGJ extends Actor
         }
     }
 
-    /**
-     * 
-     */
     
+
+    /**
     
     /**
      * 
@@ -84,13 +81,13 @@ public class GHGJ extends Actor
             World world = getWorld();
             world.removeObject(j);
         }
-        
         if (isGameLoss()) {
             transitionToGameLossWorld();
         }
-        if (level2()){
-            transitionToBarnWorld();
+        if (level3()){
+            transitionToSpaceShipWorld();
         }
+
     }
     /**
      * 
@@ -103,5 +100,4 @@ public class GHGJ extends Actor
         double angleDegrees = Math.toDegrees(angleRadians);
         setRotation((int)angleDegrees);
     }
-    }
-
+}
