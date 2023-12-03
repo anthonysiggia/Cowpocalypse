@@ -14,10 +14,22 @@ public class GHGJ extends Actor
         World gameLossOverWorld =  new  gameLossOverWorld();
         Greenfoot.setWorld(gameLossOverWorld);
     }
-
-    /**
-     * 
-     */
+              public void transitionToBarnWorld()
+    {
+        World barn =  new  barn();
+        Greenfoot.setWorld(barn);
+    }
+      public boolean level2()
+    {
+        World  world = getWorld();
+        if (world.getObjects(j.class).isEmpty()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
     public boolean isGameLoss()
     {
         World world = getWorld();
@@ -93,6 +105,9 @@ public class GHGJ extends Actor
         }
         if (isGameLoss()) {
             transitionToGameLossWorld();
+        }
+        if (level2()){
+            transitionToBarnWorld();
         }
     }
 
