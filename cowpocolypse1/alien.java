@@ -1,4 +1,5 @@
 // WARNING: This file is auto-generated and any changes to it will be overwritten
+package cowpocolypse1;
 import lang.stride.*;
 import greenfoot.*;
 

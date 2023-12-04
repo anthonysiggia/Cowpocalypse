@@ -34,7 +34,7 @@ public class cowboylevel3 extends GHGJ
     public boolean isGameWon()
     {
         World world = getWorld();
-        if (world.getObjects(j.class).isEmpty()) {
+        if (world.getObjects(alienCowEater.class).isEmpty()) {
             return true;
         }
         else {
@@ -86,6 +86,12 @@ public class cowboylevel3 extends GHGJ
         if (j != null) {
             World world = getWorld();
             world.removeObject(j);
+        }
+        if(isGameLoss()){
+            transitionToGameLossWorld();
+        }
+        if(isGameWon()){
+            transitionToGameWonWorld();
         }
     }
     /**
