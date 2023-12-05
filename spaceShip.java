@@ -290,5 +290,8 @@ public class spaceShip extends levels
         alienCowEater5.setLocation(728,328);
         alienCowEater alienCowEater53 = new alienCowEater();
         addObject(alienCowEater53,728,328);
+        cowboylevel3.setLocation(426,94);
+        cowboylevel3 cowboylevel32 = new cowboylevel3();
+        addObject(cowboylevel32,426,94);
     }
 }

@@ -1,48 +1,30 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import lang.stride.*;
+import java.util.*;
+import greenfoot.*;
 
 /**
- * Write a description of class GHGJ here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
-public class GHGJ extends Actor
+public class insaneCowboy extends GHGJ
 {
-    private static final double COWBOY_GUN_VELOCITY = 1500.0;
-            public void transitionToGameLossWorld()
+      private static final double COWBOY_GUN_VELOCITY = 1500.0;
+     
+    
+        public void gameOverWon()
     {
         World gameLossOverWorld =  new  gameLossOverWorld();
         Greenfoot.setWorld(gameLossOverWorld);
     }
-              public void transitionToBarnWorld()
-    {
-        World barn =  new  barn();
-        Greenfoot.setWorld(barn);
-    }
-      public boolean level2()
+     public boolean endInsane()
     {
         World  world = getWorld();
-        if (world.getObjects(j.class).isEmpty()) {
+        if (world.getObjects(alienInsaneMode.class).isEmpty()) {
             return true;
         }
         else {
             return false;
         }
     }
-    
-    public boolean isGameLoss()
-    {
-        World world = getWorld();
-        if (world.getObjects(cow.class).isEmpty()) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-    /**
-     * 
-     */
     public void act()
     {
         MouseInfo mouse = Greenfoot.getMouseInfo();
@@ -66,22 +48,18 @@ public class GHGJ extends Actor
             }
         }
         if (Greenfoot.isKeyDown("right")) {
-            move(2);
+            move(5);
         }
         if (Greenfoot.isKeyDown("left")) {
-            move(-2);
+            move(-5);
         }
         Actor j = getOneIntersectingObject(j.class);
         if (j != null) {
             World world = getWorld();
             world.removeObject(j);
         }
-        
-        if (isGameLoss()) {
-            transitionToGameLossWorld();
-        }
-        if (level2()){
-            transitionToBarnWorld();
+        if(endInsane()){
+            gameOverWon();
         }
     }
     /**
@@ -95,5 +73,4 @@ public class GHGJ extends Actor
         double angleDegrees = Math.toDegrees(angleRadians);
         setRotation((int)angleDegrees);
     }
-    }
-
+}

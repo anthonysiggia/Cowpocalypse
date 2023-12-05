@@ -7,7 +7,6 @@ import greenfoot.*;
  */
 public class forrest1 extends levels
 {
-    /* (World, Actor, GreenfootImage, Greenfoot and MouseInfo)*/
     private long lastFrameTimeMS;
     private double timeStepDuration;
 

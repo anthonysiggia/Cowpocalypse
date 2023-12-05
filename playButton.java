@@ -10,13 +10,9 @@ public class playButton extends Actor
 {
     public void act() 
     {
-if (Greenfoot.mouseMoved(this))
-        {
-            setImage("playButton3_highlighted.png");
-        }
-if (Greenfoot.mouseMoved(getWorld()))
-        {
-            setImage("playButton3.jpeg");
-        }
+        if (Greenfoot.mouseClicked(this)){
+          Greenfoot.setWorld(new forrest1());
+      }
 }
 }
+

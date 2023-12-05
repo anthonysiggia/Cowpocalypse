@@ -141,5 +141,23 @@ public class barn extends levels
         GHGJ gHGJ2 = new GHGJ();
         addObject(gHGJ2,249,344);
         removeObject(gHGJ2);
+        removeObject(alienCowEater9);
+        removeObject(alienCowEater10);
+        removeObject(alienCowEater8);
+        removeObject(alienCowEater6);
+        removeObject(alienCowEater4);
+        removeObject(alienCowEater2);
+        removeObject(alienCowEater);
+        removeObject(alienCowEater3);
+        removeObject(alienCowEater7);
+        removeObject(alienCowEater5);
+        removeObject(alien110);
+        alien1.setLocation(806,17);
+        removeObject(alienCowEater12);
+        removeObject(alienCowEater16);
+        removeObject(alienCowEater13);
+        removeObject(alienCowEater14);
+        removeObject(alienCowEater15);
+        removeObject(alienCowEater11);
     }
 }

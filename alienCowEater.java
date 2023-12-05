@@ -13,7 +13,7 @@ public class alienCowEater extends alien1
         if (cow != null) {
             World world = getWorld();
             world.removeObject(cow);
-            world.addObject(new alienCowEater(),Greenfoot.getRandomNumber(200),Greenfoot.getRandomNumber(300));
+            world.addObject(new alienCowEater(),Greenfoot.getRandomNumber(1),Greenfoot.getRandomNumber(1));
         }
         Actor bulllet = getOneIntersectingObject(bulllet.class);
         if (bulllet != null) {
