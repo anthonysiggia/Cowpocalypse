@@ -1,4 +1,3 @@
-// WARNING: This file is auto-generated and any changes to it will be overwritten
 import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
@@ -8,6 +7,7 @@ import greenfoot.*;
  */
 public class gameOverWonWorld extends World
 {
+    private GreenfootSound gameMusic;
 
     /**
      * Constructor for objects of class gameOverWonWorld.
@@ -15,6 +15,7 @@ public class gameOverWonWorld extends World
     public gameOverWonWorld()
     {
         super(355, 400, 1);
+        gameMusic =  new  GreenfootSound("gameover-win.wav");
     }
 
     /**
@@ -22,5 +23,14 @@ public class gameOverWonWorld extends World
      */
     public void started()
     {
+        gameMusic.playLoop();
+    }
+
+    /**
+     * 
+     */
+    public void stopped()
+    {
+        gameMusic.stop();
     }
 }

@@ -11,7 +11,10 @@ public class GHGJ extends Actor
     private static final double COWBOY_GUN_VELOCITY = 1500.0;
             public void transitionToGameLossWorld()
     {
+        World forrest1 = getWorld();
+        forrest1.stopped();
         World gameLossOverWorld =  new  gameLossOverWorld();
+        gameLossOverWorld.started();
         Greenfoot.setWorld(gameLossOverWorld);
     }
               public void transitionToBarnWorld()
