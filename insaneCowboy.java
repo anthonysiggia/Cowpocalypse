@@ -8,12 +8,14 @@ import greenfoot.*;
 public class insaneCowboy extends GHGJ
 {
       private static final double COWBOY_GUN_VELOCITY = 1500.0;
-     
     
         public void gameOverWon()
     {
-        World gameLossOverWorld =  new  gameLossOverWorld();
-        Greenfoot.setWorld(gameLossOverWorld);
+        World insaneMode = getWorld();
+        insaneMode.stopped();
+        World gameOverWonWorld =  new  gameOverWonWorld();
+        gameOverWonWorld.started();
+        Greenfoot.setWorld(gameOverWonWorld);
     }
      public boolean endInsane()
     {

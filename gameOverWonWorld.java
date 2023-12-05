@@ -15,22 +15,8 @@ public class gameOverWonWorld extends World
     public gameOverWonWorld()
     {
         super(355, 400, 1);
-        gameMusic =  new  GreenfootSound("gameover-win.wav");
+        Greenfoot.playSound("gameover-win.wav");
     }
 
-    /**
-     * 
-     */
-    public void started()
-    {
-        gameMusic.playLoop();
-    }
-
-    /**
-     * 
-     */
-    public void stopped()
-    {
-        gameMusic.stop();
-    }
+    
 }

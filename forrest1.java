@@ -9,7 +9,7 @@ public class forrest1 extends levels
 {
     private long lastFrameTimeMS;
     private double timeStepDuration;
-
+  
     /**
      * 
      */
@@ -17,10 +17,12 @@ public class forrest1 extends levels
     {
         lastFrameTimeMS = System.currentTimeMillis();
         timeStepDuration = 1.0 / 60;
-
+        Greenfoot.playSound("OPL2 - Buxtehude - BuxWv185.wav");
         prepare();
     }
+     
 
+    
     /**
      * 
      */
