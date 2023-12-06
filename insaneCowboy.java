@@ -20,7 +20,7 @@ public class insaneCowboy extends GHGJ
      public boolean endInsane()
     {
         World  world = getWorld();
-        if (world.getObjects(alienInsaneMode.class).isEmpty()) {
+        if (world.getObjects(alienCowEater.class).isEmpty()) {
             return true;
         }
         else {

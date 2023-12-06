@@ -169,5 +169,29 @@ public class insaneMode extends levels
         removeObject(insaneCowboy15);
         removeObject(insaneCowboy9);
         removeObject(insaneCowboy14);
+        alienInsaneMode alienInsaneMode8 = new alienInsaneMode();
+        addObject(alienInsaneMode8,788,146);
+        alienInsaneMode8.setLocation(813,150);
+        alienInsaneMode alienInsaneMode9 = new alienInsaneMode();
+        addObject(alienInsaneMode9,813,150);
+        alienInsaneMode alienInsaneMode10 = new alienInsaneMode();
+        addObject(alienInsaneMode10,710,143);
+        alienInsaneMode.setLocation(735,158);
+        alienInsaneMode alienInsaneMode11 = new alienInsaneMode();
+        addObject(alienInsaneMode11,735,158);
+        alienInsaneMode9.setLocation(839,160);
+        alienInsaneMode alienInsaneMode12 = new alienInsaneMode();
+        addObject(alienInsaneMode12,839,160);
+        alienCowEater alienCowEater = new alienCowEater();
+        addObject(alienCowEater,130,103);
+        alienCowEater.setLocation(141,105);
+        alienCowEater alienCowEater2 = new alienCowEater();
+        addObject(alienCowEater2,141,105);
+        alienInsaneMode8.setLocation(783,157);
+        alienInsaneMode alienInsaneMode13 = new alienInsaneMode();
+        addObject(alienInsaneMode13,783,157);
+        alienInsaneMode.setLocation(754,157);
+        alienInsaneMode alienInsaneMode14 = new alienInsaneMode();
+        addObject(alienInsaneMode14,754,157);
     }
 }
