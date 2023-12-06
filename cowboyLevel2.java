@@ -68,6 +68,7 @@ public class cowboyLevel2 extends GHGJ
                 bulllet bullet =  new  bulllet();
                 bullet.setVelocity(gunToMouse);
                 getWorld().addObject(bullet, getX(), getY());
+                Greenfoot.playSound("alienshoot1.wav");
             }
         }
         if (Greenfoot.isKeyDown("right")) {
